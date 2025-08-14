@@ -20,7 +20,7 @@ impl Router {
                         // else invoke static page handler
                         _ => {
                             let resp: HttpResponse = StaticPageHandler::handle(&req);
-                            let _ = resp.send_response(stream);
+                            let _ = resp.send(stream);
                         }
                     }
                 }
